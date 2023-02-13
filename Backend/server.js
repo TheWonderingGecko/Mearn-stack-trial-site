@@ -2,10 +2,16 @@ require('dotenv').config()
 const workoutRoutes = require('./routes/wourkouts')
 const mongoose = require('mongoose')
 const express = require('express')
+const cors = require('cors')
 
 const app = express()
 
 app.use(express.json())
+app.use(
+  cors({
+    origin: '*',
+  })
+)
 app.use((req, res, next) => {
   console.log(req.path, req.method)
   next()
