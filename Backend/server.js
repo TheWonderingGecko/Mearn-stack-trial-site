@@ -1,4 +1,5 @@
 require('dotenv').config()
+
 const workoutRoutes = require('./routes/wourkouts')
 const mongoose = require('mongoose')
 const express = require('express')
@@ -24,7 +25,7 @@ mongoose.set('strictQuery', false)
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT || 4000, () => {
       console.log(' connected to dp listening on port', process.env.PORT)
     })
   })

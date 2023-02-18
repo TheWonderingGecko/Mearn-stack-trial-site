@@ -8,7 +8,7 @@ const WorkoutDetails = ({ workout }) => {
 
   const handleClick = async () => {
     const response = await fetch(
-      'http://localhost:4000/api/workouts/' + workout._id,
+      'https://mern-trial.herokuapp.com/api/workouts' + workout._id,
       {
         method: 'DELETE',
       }
