@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 const workoutRoutes = require('./routes/wourkouts')
+const userRoutes = require('./routes/mearn_auth')
 const mongoose = require('mongoose')
 const express = require('express')
 const cors = require('cors')
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/api/workouts', workoutRoutes)
+app.use('/api/user', userRoutes)
 
 mongoose.set('strictQuery', false)
 
