@@ -12,8 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchWorkouts = async () => {
       const response = await fetch(
-        // 'https://mern-trial.herokuapp.com/api/workouts/'
-        'http://localhost:4000/api/workouts',
+        'https://mern-trial.herokuapp.com/api/workouts',
         {
           headers: {
             Authorization: 'Bearer ' + user.token,
