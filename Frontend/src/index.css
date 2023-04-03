@@ -71,6 +71,7 @@ header a {
   /* CSS rules here */
   .workout-details span {
     position: absolute;
+    background: none;
     top: 10px;
     right: 2px;
   }
